@@ -1,0 +1,6 @@
+{
+  "name": "BiteSprint",
+  "description": "Small-scale food delivery app featuring interactive real-time order tracking, live courier simulation, and push notification updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
