@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiteSprint - Delete Account &amp; Data</title>
+  <style>
+    :root {
+      --primary: #FF5722;
+      --danger: #DC2626;
+      --text: #1E293B;
+      --muted: #64748B;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --border: #E2E8F0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+    .badge {
+      display: inline-block;
+      background: #FEF2F2;
+      color: var(--danger);
+      font-weight: 700;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #FECACA;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+      color: #0F172A;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #0F172A;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    .step-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 14px 0;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    input, select, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 16px;
+      background: var(--danger);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.92;
+    }
+    a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">ACCOUNT &amp; DATA DELETION</span>
+    <h1>Delete Your BiteSprint Account</h1>
+    <p class="subtitle">
+      App: <strong>BiteSprint</strong> (<code>com.aistudio.fooddelivery.bspxrq</code>) &bull;
+      Developer: <strong>Shakti Swarup Mohanty</strong>
+    </p>
+
+    <p>
+      You can permanently delete your BiteSprint account and all associated personal data using either of the two options below.
+    </p>
+
+    <h2>Option 1: Instant In-App Deletion (Recommended)</h2>
+    <div class="step-box">
+      <ol style="margin: 0; padding-left: 18px;">
+        <li>Open the <strong>BiteSprint</strong> app on your Android device and sign in.</li>
+        <li>Tap your <strong>Profile Avatar</strong> in the top-right corner of your dashboard (Customer, Vendor, or Driver).</li>
+        <li>Select <strong>Delete Account</strong> from the menu.</li>
+        <li>Tap <strong>Delete Forever</strong> in the confirmation dialog.</li>
+      </ol>
+    </div>
+
+    <h2>Option 2: Request Deletion Online (If App Is Uninstalled)</h2>
+    <p>
+      If you no longer have the app installed, submit a deletion request using the form below or email
+      <a href="mailto:shaktiswarup500123@gmail.com">shaktiswarup500123@gmail.com</a> with the subject
+      <em>"BiteSprint Account Deletion Request"</em>. Requests are processed within <strong>7 business days</strong>.
+    </p>
+
+    <form id="deletionForm" onsubmit="submitDeletionRequest(event)" class="step-box">
+      <label for="email">Registered Email Address</label>
+      <input type="email" id="email" required placeholder="you@example.com" />
+
+      <label for="role">Account Role</label>
+      <select id="role">
+        <option value="Customer">Customer</option>
+        <option value="Vendor">Vendor Partner</option>
+        <option value="Driver">Delivery Driver</option>
+      </select>
+
+      <label for="reason">Optional Notes</label>
+      <textarea id="reason" rows="3" placeholder="Any extra details to help verify your account..."></textarea>
+
+      <button type="submit">Send Account Deletion Request</button>
+    </form>
+
+    <h2>What Data Is Deleted vs. Retained</h2>
+    <ul>
+      <li><strong>Deleted Immediately / Upon Request:</strong> Your Firebase Authentication user record (email, display name, UID), saved profile preferences, saved delivery addresses, active cart items, local order history, and notifications.</li>
+      <li><strong>Retention:</strong> No personal data is retained after account deletion is completed, except where required by applicable law.</li>
+    </ul>
+
+    <p style="margin-top: 18px;">
+      View our <a href="./privacy-policy.html">Privacy Policy</a>.
+    </p>
+
+    <div class="footer">
+      &copy; 2026 BiteSprint &bull; Shakti Swarup Mohanty &bull;
+      <a href="mailto:shaktiswarup500123@gmail.com">shaktiswarup500123@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    function submitDeletionRequest(e) {
+      e.preventDefault();
+      var email = document.getElementById("email").value.trim();
+      var role = document.getElementById("role").value;
+      var reason = document.getElementById("reason").value.trim();
+      var subject = encodeURIComponent("BiteSprint Account Deletion Request - " + email);
+      var body = encodeURIComponent(
+        "Hello BiteSprint Support,\n\n" +
+        "Please permanently delete my BiteSprint account and all associated personal data.\n\n" +
+        "Registered Email: " + email + "\n" +
+        "Account Role: " + role + "\n" +
+        (reason ? "Notes: " + reason + "\n" : "") +
+        "\nThank you."
+      );
+      window.location.href = "mailto:shaktiswarup500123@gmail.com?subject=" + subject + "&body=" + body;
+    }
+  </script>
+</body>
+</html>
